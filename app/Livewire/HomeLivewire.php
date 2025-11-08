@@ -17,10 +17,9 @@ class HomeLivewire extends Component
 
    public function mount()
 {
-    // Cek apakah user login
+    // Kalau belum login, redirect setelah komponen dirender
     if (!Auth::check()) {
-        // Kalau belum login, redirect ke halaman login
-        return redirect()->route('auth.login');
+        return $this->redirectRoute('auth.login');
     }
 
     // Kalau login, simpan data user
@@ -29,6 +28,7 @@ class HomeLivewire extends Component
     // Hitung statistik
     $this->calculateStatistics();
 }
+
 
     public function calculateStatistics()
     {
