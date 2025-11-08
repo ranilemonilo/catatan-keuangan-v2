@@ -58,7 +58,7 @@ class HomeLivewire extends Component
             ->take(5)
             ->get();
 
-        return view('pages.home-livewire', [
+        return view('pages.livewire-home-livewire', [
             'recentTransactions' => $recentTransactions
         ]);
     }
