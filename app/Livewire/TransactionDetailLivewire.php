@@ -37,7 +37,7 @@ class TransactionDetailLivewire extends Component
 
     public function render()
     {
-        return view('livewire.transaction-detail-livewire');
+        return view('livewire-transaction-detail-livewire');
     }
 
     // Edit Receipt
